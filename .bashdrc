@@ -1,0 +1,10 @@
+BASHD=~/.bash.d
+
+function sourcefile {
+	filename=$BASHD/$1
+	if [ -f $filename ]; then
+		. $filename
+	fi
+}
+
+sourcefile .bash_aliases
