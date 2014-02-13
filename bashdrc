@@ -9,3 +9,9 @@ function sourcefile {
 
 # load default bashd config
 sourcefile bash_aliases
+
+# load config extensions
+for ext in `find $BASHD/ext -type f`; do 
+	echo $ext
+	sourcefile $ext
+done
