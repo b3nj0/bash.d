@@ -7,4 +7,5 @@ function sourcefile {
 	fi
 }
 
-sourcefile .bash_aliases
+# load default bashd config
+sourcefile bash_aliases
