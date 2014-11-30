@@ -1,17 +1,17 @@
 BASHD=~/.bash.d
 
 function sourcefile {
-	filename=$BASHD/$1
+	filename=$1
 	if [ -f $filename ]; then
+		echo $filename
 		. $filename
 	fi
 }
 
 # load default bashd config
-sourcefile bash_aliases
+sourcefile $BASHD/bash_aliases
 
 # load config extensions
 for ext in `find $BASHD/ext -type f`; do 
-	echo $ext
 	sourcefile $ext
 done
